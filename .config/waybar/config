@@ -13,6 +13,7 @@
          "disable-scroll": false,
          "all-outputs": true,
          "format": "{icon}",
+         "persistent-workspaces": { "1": [], "2": [], "3": [] },
          "format-icons": {
              "1": "",
              "2": "",
@@ -42,7 +43,7 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:%I:%M }",
+        "format": "{:%m-%d || %I:%M }",
         "format-alt": "{:%Y-%m-%d}"
       
     },
@@ -77,7 +78,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}% ",
+        "format": "{icon} {capacity}% [{time}]",
         "format-charging": "{icon} {capacity}%",
         "format-plugged": "{icon} {capacity}%",
         "format-alt": "{icon} {time} ",

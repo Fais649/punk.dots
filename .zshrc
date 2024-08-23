@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+ZSH=/usr/share/oh-my-zsh/
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -70,13 +70,11 @@ ZSH_THEME="minimal"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git battery fzf)
-
-source $ZSH/oh-my-zsh.sh
+plugins=(git fzf)
 
 # User configuration
 
-export MANPATH="/usr/local/man:$MANPATH"
+# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -100,19 +98,13 @@ export ARCHFLAGS="-arch $(uname -m)"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
- alias zshconfig="nvim ~/.zshrc"
- alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias zshconfig="nvim ~/.zshrc"
+alias ohmyzsh="nvim ~/.oh-my-zsh"
 
- RPROMPT='$(date +"%m.%d") | $(cat /sys/class/power_supply/BAT0/capacity)%%'
-export PATH=$HOME/.local/bin:$PATH
+ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+  mkdir $ZSH_CACHE_DIR
+fi
 
-alias zvim='NVIM_APPNAME=lazyvim nvim'
-alias kvim='NVIM_APPNAME=kickvim nvim'
-# alias avim='NVIM_APPNAME=astrovim nvim'
-
-
-
-# Begin: PlatformIO Core completion support
-eval "$(_PIO_COMPLETE=zsh_source pio)"
-# End: PlatformIO Core completion support
-export BW_SESSION="yz+GLaHnzFQHCtwRovcWo8AzPf0I7EQ2x94PuEBL6Kbu9ssJDsQ8YtPmn4l67QKPH8S3I6QwOm2g3ZpyZenDCQ=="
+source $ZSH/oh-my-zsh.sh
+RPROMPT='$(date +"%H:%m")'
