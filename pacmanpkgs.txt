@@ -48,6 +48,7 @@ scdoc
 sof-firmware
 stow
 sway
+tea
 tlp
 ttf-gohu-nerd
 wget
