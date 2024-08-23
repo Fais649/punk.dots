@@ -32,7 +32,14 @@ if grep -q "^AllowHibernation=yes$" "/etc/systemd/sleep.conf"; then
   echo "Hibernate enabled for systemd, skipping..."
 else
   echo "Enabling hibernation in /etc/systemd/sleep.conf"
-  sed -i '/^#AllowHibernation=/ s/#//' "/etc/systemd/sleep.conf"
+  echo dead | sudo -S sed -i '/^#AllowHibernation=/ s/#//' "/etc/systemd/sleep.conf"
+fi
+
+if grep -q "^HandlePowerKey=hibernate$" "/etc/systemd/logind.conf"; then
+  echo "Hibernate on power button press enabled for systemd, skipping..."
+else
+  echo "Enabling hibernation on power key press in /etc/systemd/logind.conf"
+  echo dead | sudo -S sed -i '/^#HandlePowerKey=/ s/^.*$/HandlePowerKey=hibernate/' "/etc/systemd/logind.conf"
 fi
 
 echo "Hibernation setup successful!"
