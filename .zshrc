@@ -108,3 +108,16 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 RPROMPT='$(date +"%H:%m")'
+
+
+# Begin: PlatformIO Core completion support
+eval "$(_PIO_COMPLETE=zsh_source pio)"
+# End: PlatformIO Core completion support
+
+alias ncode="nvim ~/punk.code/"
+alias nhome="nvim ~"
+alias ndot="nvim ~/punk.dots/"
+
+alias ccode="cd ~/punk.code/"
+alias cdot="cd ~/punk.dots/"
+export PATH="$PATH:$HOME/.cargo/bin/"
