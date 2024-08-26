@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-
+export PATH="$HOME/.local/bin:$PATH"
 # Path to your Oh My Zsh installation.
 ZSH=/usr/share/oh-my-zsh/
 
@@ -70,7 +70,7 @@ ZSH_THEME="minimal"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fzf)
+plugins=(git)
 
 # User configuration
 
@@ -109,15 +109,12 @@ fi
 source $ZSH/oh-my-zsh.sh
 RPROMPT='$(date +"%H:%m")'
 
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 
 # Begin: PlatformIO Core completion support
 eval "$(_PIO_COMPLETE=zsh_source pio)"
 # End: PlatformIO Core completion support
 
-alias ncode="nvim ~/punk.code/"
-alias nhome="nvim ~"
-alias ndot="nvim ~/punk.dots/"
-
-alias ccode="cd ~/punk.code/"
-alias cdot="cd ~/punk.dots/"
-export PATH="$PATH:$HOME/.cargo/bin/"
+alias punkc="cd ~/punk.systems/code/ ; ls -la"
+alias punkd="cd ~/punk.systems/dots// ; ls -la"
