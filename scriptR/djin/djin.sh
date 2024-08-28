@@ -1,9 +1,20 @@
 #!/bin/bash
 
-djin=$(cat options | fzf --height=10 --header "Where to?" --layout=reverse)
+while true; do
+	# djin=$(cat options | fzf --height=10 --header "Where to?" --layout=reverse)
+	djin=$(echo ".." && fd --type d --hidden --max-depth 1 | fzf --height=10 --header "Where to?" --layout=reverse --bind "esc:abort")
 
-if [[ -z $djin ]]; then
-	exit 0
-fi
+	if [[ -z $djin ]]; then
+		break
+	fi
 
-./$(echo $djin).sh
+	if [ "$djin" == ".." ]; then
+		cd ..
+	fi
+
+	# ./$(ec1ho $djin).sh
+	cd $djin
+
+done
+
+exec zsh

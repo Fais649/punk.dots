@@ -70,7 +70,7 @@ ZSH_THEME="minimal"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=()
 
 # User configuration
 
@@ -87,7 +87,7 @@ plugins=(git)
 # fi
 
 # Compilation flags
-export ARCHFLAGS="-arch $(uname -m)"
+# export ARCHFLAGS="-arch $(uname -m)"
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
@@ -113,7 +113,7 @@ RPROMPT='$(date +"%H:%m")'
 source <(fzf --zsh)
 
 # Begin: PlatformIO Core completion support
-eval "$(_PIO_COMPLETE=zsh_source pio)"
+# eval "$(_PIO_COMPLETE=zsh_source pio)"
 # End: PlatformIO Core completion support
 
 alias punkc="cd ~/punk.systems/code/ ; ls -la"
