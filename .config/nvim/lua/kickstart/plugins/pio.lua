@@ -6,6 +6,10 @@ return {
     { 'nvim-lua/plenary.nvim' },
   },
   config = function()
-    require('toggleterm').setup()
+    require('toggleterm').setup {
+      open_mapping = [[¸]],
+      autochdir = true,
+      direction = 'float',
+    }
   end,
 }

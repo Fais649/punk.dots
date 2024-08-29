@@ -94,6 +94,7 @@ require('lazy').setup({
         --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
         --   },
         -- },
+        autochdir = true,
         pickers = { find_files = { cwd = '~', hidden = true } },
         extensions = {
           ['ui-select'] = {
