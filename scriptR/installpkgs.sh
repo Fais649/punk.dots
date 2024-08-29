@@ -28,6 +28,14 @@ fi
 cd "$scriptR" || exit
 yay -S --needed --noconfirm - <../yaypkgs.txt
 
+read -rp "Apply Dots? (y/n): " dots
+
+if [ "$dots" == "y" ]; then
+	echo "Stowing dots..."
+	stow -D ../
+	stow ../
+fi
+
 read -rp "Set up Hibernation over swapfile for btrfs? (y/n): " hibernate
 
 if [ "$hibernate" == "y" ]; then
