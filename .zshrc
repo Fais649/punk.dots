@@ -119,3 +119,4 @@ source <(fzf --zsh)
 alias punk="cd ~/punk.systems/ ; ls -la"
 alias punkc="cd ~/punk.systems/code/ ; ls -la"
 alias punkd="cd ~/punk.systems/dots// ; ls -la"
+alias punkssh="ssh root@punk.systems"
