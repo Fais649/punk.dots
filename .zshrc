@@ -116,5 +116,6 @@ source <(fzf --zsh)
 # eval "$(_PIO_COMPLETE=zsh_source pio)"
 # End: PlatformIO Core completion support
 
+alias punk="cd ~/punk.systems/ ; ls -la"
 alias punkc="cd ~/punk.systems/code/ ; ls -la"
 alias punkd="cd ~/punk.systems/dots// ; ls -la"

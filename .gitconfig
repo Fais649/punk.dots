@@ -1,3 +1,5 @@
 [user]
 	email = xial649@gmail.com
 	name = Fais649
+[credential]
+	helper = libsecret
