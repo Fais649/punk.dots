@@ -113,7 +113,7 @@ RPROMPT='$(date +"%H:%m")'
 source <(fzf --zsh)
 
 # Begin: PlatformIO Core completion support
-# eval "$(_PIO_COMPLETE=zsh_source pio)"
+eval "$(_PIO_COMPLETE=zsh_source pio)"
 # End: PlatformIO Core completion support
 
 alias punk="cd ~/punk.systems/ ; ls -la"

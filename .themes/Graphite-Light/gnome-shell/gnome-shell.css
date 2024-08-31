@@ -247,7 +247,7 @@ stage {
 .unlock-dialog .switch-user-button:insensitive,
 .unlock-dialog .login-dialog-session-list-button:insensitive, .unlock-dialog .modal-dialog-button:insensitive {
   color: rgba(255, 255, 255, 0.35);
-  background-color: #212121;
+  background-color: #000000;
   box-shadow: none !important;
 }
 
@@ -759,7 +759,7 @@ StEntry StLabel.hint-text, .search-entry StLabel.hint-text {
 
 /* On-screen Keyboard */
 #keyboard {
-  background-color: #242424;
+  background-color: #030303;
   box-shadow: none;
 }
 
@@ -847,7 +847,7 @@ StEntry StLabel.hint-text, .search-entry StLabel.hint-text {
 .keyboard-subkeys {
   color: inherit;
   -arrow-border-radius: 12px;
-  -arrow-background-color: #242424;
+  -arrow-background-color: #030303;
   -arrow-border-width: 0;
   -arrow-border-color: transparent;
   -arrow-base: 20px;
@@ -972,7 +972,7 @@ StEntry StLabel.hint-text, .search-entry StLabel.hint-text {
 }
 
 .unlock-dialog .user-icon StIcon {
-  background-color: #212121 !important;
+  background-color: #000000 !important;
   color: white !important;
 }
 
@@ -1464,7 +1464,7 @@ StEntry StLabel.hint-text, .search-entry StLabel.hint-text {
 /* OSD */
 .screenshot-ui-panel, .workspace-switcher-container, .switcher-list, .resize-popup, .osd-window {
   color: rgba(255, 255, 255, 0.7);
-  background-color: #212121;
+  background-color: #000000;
   border: none;
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.25);
   margin: 5px 8px 11px;
@@ -1503,7 +1503,7 @@ StEntry StLabel.hint-text, .search-entry StLabel.hint-text {
 
 .pad-osd-window {
   padding: 32px;
-  background-color: #212121;
+  background-color: #000000;
 }
 
 .pad-osd-window .pad-osd-title-box {
@@ -1949,14 +1949,14 @@ StEntry StLabel.hint-text, .search-entry StLabel.hint-text {
 .unlock-dialog-notifications-container .unlock-dialog-notification-source {
   padding: 12px 6px;
   border: none;
-  background-color: #212121;
+  background-color: #000000;
   color: white;
   border-radius: 12px;
 }
 
 .unlock-dialog-notifications-container .notification.critical,
 .unlock-dialog-notifications-container .unlock-dialog-notification-source.critical {
-  background-color: #353535;
+  background-color: #141414;
 }
 
 .unlock-dialog-notification-label {
@@ -2359,7 +2359,7 @@ StWidget.focused .app-grid-running-dot {
   border-radius: 36px;
   padding: 12px;
   box-shadow: none;
-  background-color: #212121;
+  background-color: #0F0F0F;
   border: 2px solid #e0e0e0;
 }
 
@@ -2421,7 +2421,7 @@ StWidget.focused .app-grid-running-dot {
 
 .system-action-icon {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-  background-color: #212121;
+  background-color: #000000;
   color: white;
   border-radius: 9999px;
   icon-size: 48px;
@@ -3226,7 +3226,7 @@ StWidget.focused .app-grid-running-dot {
 }
 
 .workspace-animation {
-  background-color: #212121;
+  background-color: #000000;
 }
 
 .calendar .calendar-change-month-back,
@@ -3323,7 +3323,7 @@ StWidget.focused .app-grid-running-dot {
 }
 
 #overviewGroup {
-  background-color: #191919;
+  background-color: black;
 }
 
 .osd-window {
@@ -3939,7 +3939,7 @@ StWidget.focused .app-grid-running-dot {
 }
 
 .screenshot-ui-shot-cast-container {
-  background-color: #2e2e2e;
+  background-color: #0d0d0d;
   border-radius: 12px;
   padding: 3px;
   spacing: 3px;
@@ -3960,7 +3960,7 @@ StWidget.focused .app-grid-running-dot {
 }
 
 .screenshot-ui-shot-cast-button:hover, .screenshot-ui-shot-cast-button:focus {
-  background-color: #3b3b3b;
+  background-color: #1a1a1a;
 }
 
 .screenshot-ui-shot-cast-button:active {
@@ -4010,7 +4010,7 @@ StWidget.focused .app-grid-running-dot {
 }
 
 .screenshot-ui-window-selector {
-  background-color: #242424;
+  background-color: #030303;
 }
 
 .screenshot-ui-window-selector .screenshot-ui-window-selector-window-container {
@@ -4069,7 +4069,7 @@ StWidget.focused .app-grid-running-dot {
 
 .screenshot-ui-tooltip {
   color: white;
-  background-color: #212121;
+  background-color: #000000;
   border-radius: 9999px;
   padding: 6px 12px;
   text-align: center;
@@ -4082,7 +4082,7 @@ StWidget.focused .app-grid-running-dot {
 
 .window-caption {
   color: white;
-  background-color: #2C2C2C;
+  background-color: #0F0F0F;
   border-radius: 9999px;
   padding: 6px 12px;
   border: none;
@@ -4090,7 +4090,7 @@ StWidget.focused .app-grid-running-dot {
 }
 
 .window-close, .screenshot-ui-close-button {
-  background-color: #242424;
+  background-color: #030303;
   color: white;
   border-radius: 9999px;
   padding: 3px;
@@ -4102,12 +4102,12 @@ StWidget.focused .app-grid-running-dot {
 
 .window-close:hover, .screenshot-ui-close-button:hover {
   color: white;
-  background-color: #333333;
+  background-color: #121212;
 }
 
 .window-close:active, .screenshot-ui-close-button:active {
   color: white;
-  background-color: #151515;
+  background-color: black;
 }
 
 .window-close StIcon, .screenshot-ui-close-button StIcon {
@@ -4116,7 +4116,7 @@ StWidget.focused .app-grid-running-dot {
 
 .workspace-background {
   border-radius: 30px;
-  background-color: #191919;
+  background-color: black;
   box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.25);
 }
 

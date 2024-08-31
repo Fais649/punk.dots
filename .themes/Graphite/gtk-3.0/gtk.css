@@ -425,7 +425,7 @@ headerbar label:disabled, tab label:disabled, button label:disabled {
 
 label.osd {
   border-radius: 6px;
-  background-color: rgba(52, 52, 52, 0.9);
+  background-color: rgba(10, 10, 10, 0.9);
   color: white;
 }
 
@@ -1554,7 +1554,7 @@ searchbar > revealer > box {
 
 .titlebar {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1);
-  background-color: #2C2C2C;
+  background-color: #0F0F0F;
   color: white;
   border-radius: 11px 11px 0 0;
 }
@@ -1564,7 +1564,7 @@ searchbar > revealer > box {
 }
 
 .titlebar:backdrop {
-  background-color: #2C2C2C;
+  background-color: #0F0F0F;
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -1624,7 +1624,7 @@ searchbar > revealer > box {
 
 .titlebar stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action).text-button:checked {
   background-color: #e0e0e0;
-  color: #2C2C2C;
+  color: #0F0F0F;
 }
 
 .titlebar .path-bar button:not(.suggested-action):not(.destructive-action).text-button {
@@ -1743,7 +1743,7 @@ headerbar:not(.titlebar) {
 }
 
 box.vertical headerbar {
-  background-color: #2C2C2C;
+  background-color: #0F0F0F;
 }
 
 headerbar > box.left,
@@ -2011,13 +2011,13 @@ menubar,
 .menubar {
   -GtkWidget-window-dragging: true;
   padding: 0;
-  background-color: #2C2C2C;
+  background-color: #0F0F0F;
   color: white;
 }
 
 menubar:backdrop,
 .menubar:backdrop {
-  background-color: #2C2C2C;
+  background-color: #0F0F0F;
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -4010,7 +4010,7 @@ tooltip {
 }
 
 tooltip.background {
-  background-color: rgba(52, 52, 52, 0.9);
+  background-color: rgba(10, 10, 10, 0.9);
   color: white;
 }
 
@@ -4194,12 +4194,12 @@ tooltip.csd decoration {
   padding: 2px;
   border-radius: 0;
   box-shadow: none;
-  background-color: #2C2C2C;
+  background-color: #0F0F0F;
   border: 2px solid #333333;
 }
 
 .solid-csd decoration:backdrop {
-  background-color: #2C2C2C;
+  background-color: #0F0F0F;
 }
 
 button.titlebutton:not(.suggested-action):not(.destructive-action) {
@@ -4211,12 +4211,12 @@ button.titlebutton:not(.suggested-action):not(.destructive-action) {
 
 button.titlebutton:not(.suggested-action):not(.destructive-action).close:hover {
   background-color: #e0e0e0;
-  color: #2C2C2C;
+  color: #0F0F0F;
 }
 
 button.titlebutton:not(.suggested-action):not(.destructive-action).close:active {
   background-color: #c7c7c7;
-  color: #2C2C2C;
+  color: #0F0F0F;
 }
 
 .monospace {
@@ -4396,7 +4396,7 @@ popover.emoji-completion .emoji:hover {
 }
 
 .nautilus-window.background.csd {
-  background-color: #2C2C2C;
+  background-color: #0F0F0F;
   border-radius: 0 0 12px 12px;
 }
 
@@ -5920,7 +5920,7 @@ list.categories {
   min-height: 24px;
   padding: 0 4px;
   border-radius: 6px;
-  background-color: #242424;
+  background-color: #030303;
   color: white;
 }
 
@@ -5995,14 +5995,14 @@ window#GearyMainWindow.background.csd stack#conversation_viewer .geary-composer-
 
 .geary-main-window.unified > deck > overlay > .geary-main-layout > leaflet > separator.sidebar,
 .geary-main-window.unified > deck > overlay > .geary-main-layout > leaflet > leaflet > separator.sidebar {
-  background-color: #2C2C2C;
+  background-color: #0F0F0F;
   box-shadow: inset 0 -1px rgba(0, 0, 0, 0.12);
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 75ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 .geary-main-window.unified > deck > overlay > .geary-main-layout > leaflet > separator.sidebar:backdrop,
 .geary-main-window.unified > deck > overlay > .geary-main-layout > leaflet > leaflet > separator.sidebar:backdrop {
-  background-color: #2C2C2C;
+  background-color: #0F0F0F;
 }
 
 .geary-main-window.unified > deck > overlay > .geary-main-layout > leaflet > leaflet > box.vertical + separator.sidebar {
@@ -6305,7 +6305,7 @@ window.background.chromium menu menuitem {
 }
 
 tooltip.background.chromium {
-  background-color: #343434;
+  background-color: #0a0a0a;
 }
 
 /***********
@@ -6556,12 +6556,12 @@ UnityDecoration .top {
   border-style: none;
   border-radius: 12px 12px 0 0;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-  background-color: #2C2C2C;
+  background-color: #0F0F0F;
   color: white;
 }
 
 UnityDecoration .top:backdrop {
-  background-color: #2C2C2C;
+  background-color: #0F0F0F;
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -6586,7 +6586,7 @@ UnityDecoration .menuitem:hover {
 
 UnityPanelWidget,
 .unity-panel {
-  background-color: #212121;
+  background-color: #000000;
   color: white;
 }
 
@@ -6622,7 +6622,7 @@ UnityPanelWidget:backdrop,
 }
 
 .mate-panel-menu-bar {
-  background-color: #212121;
+  background-color: black;
   color: rgba(255, 255, 255, 0.7);
   font-weight: 500;
 }
@@ -6960,7 +6960,7 @@ na-tray-applet {
 }
 
 .caja-desktop.view .entry {
-  background-color: #2C2C2C;
+  background-color: #0F0F0F;
   color: white;
   caret-color: currentColor;
 }
@@ -7062,7 +7062,7 @@ na-tray-applet {
 /* multimedia OSD */
 MsdOsdWindow.background.osd {
   border-radius: 6px;
-  background-color: rgba(52, 52, 52, 0.9);
+  background-color: rgba(10, 10, 10, 0.9);
   color: white;
 }
 
@@ -7361,13 +7361,13 @@ MsdOsdWindow.background.osd .progressbar {
 
 .budgie-panel {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
-  background-color: #212121;
+  background-color: black;
   color: rgba(255, 255, 255, 0.7);
   font-weight: 500;
 }
 
 .budgie-panel.transparent {
-  background-color: #242424;
+  background-color: #030303;
 }
 
 .budgie-panel button {
@@ -7649,7 +7649,7 @@ calendar.raven-calendar:selected {
 }
 
 .raven-mpris {
-  background-color: #242424;
+  background-color: #030303;
   color: white;
 }
 
@@ -7773,7 +7773,7 @@ calendar.raven-calendar:selected {
  ***************/
 .xfce4-panel.background {
   border: none;
-  background-color: #212121;
+  background-color: black;
   color: rgba(255, 255, 255, 0.7);
   font-weight: 500;
 }
@@ -7875,7 +7875,7 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
  * LightDM GTK+ Greeter *
  ************************/
 #panel_window {
-  background-color: #2C2C2C;
+  background-color: #0F0F0F;
   color: white;
 }
 
@@ -7934,7 +7934,7 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
  * Nemo *
  ********/
 .nemo-window {
-  background-color: #2C2C2C;
+  background-color: #0F0F0F;
 }
 
 .nemo-window .primary-toolbar {
@@ -8018,7 +8018,7 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
 }
 
 .nemo-window paned > .sidebar .places-treeview {
-  -NemoPlacesTreeView-disk-full-bg-color: #6b6b6b;
+  -NemoPlacesTreeView-disk-full-bg-color: #575757;
   -NemoPlacesTreeView-disk-full-fg-color: #DDDDDD;
 }
 
@@ -8159,9 +8159,9 @@ read if you used those and something break with a version upgrade you're on your
 @define-color wm_title white;
 @define-color wm_unfocused_title rgba(255, 255, 255, 0.7);
 @define-color wm_highlight rgba(255, 255, 255, 0.1);
-@define-color wm_bg #2C2C2C;
-@define-color wm_unfocused_bg #2C2C2C;
-@define-color wm_button_close_icon #2C2C2C;
+@define-color wm_bg #0F0F0F;
+@define-color wm_unfocused_bg #0F0F0F;
+@define-color wm_button_close_icon #0F0F0F;
 @define-color wm_button_close_hover_bg #e0e0e0;
 @define-color wm_button_close_active_bg #c7c7c7;
 /*
@@ -8172,7 +8172,7 @@ FIXME this is really an API */
 @define-color text_view_bg #FFFFFF;
 @define-color budgie_tasklist_indicator_color white;
 @define-color budgie_tasklist_indicator_color_active white;
-@define-color budgie_tasklist_indicator_color_active_window #999999;
+@define-color budgie_tasklist_indicator_color_active_window #8a8a8a;
 @define-color budgie_tasklist_indicator_color_attention #F4B400;
 @define-color STRAWBERRY_100 #FF9262;
 @define-color STRAWBERRY_300 #FF793E;
@@ -8246,7 +8246,7 @@ FIXME this is really an API */
 @define-color window_fg_color rgba(0, 0, 0, 0.87);
 @define-color view_bg_color #FFFFFF;
 @define-color view_fg_color rgba(0, 0, 0, 0.87);
-@define-color headerbar_bg_color #2C2C2C;
+@define-color headerbar_bg_color #0F0F0F;
 @define-color headerbar_fg_color white;
 @define-color headerbar_border_color rgba(0, 0, 0, 0.12);
 @define-color headerbar_backdrop_color @window_bg_color;
