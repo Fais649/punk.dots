@@ -3,6 +3,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
   event = 'VimEnter',
   branch = '0.1.x',
   dependencies = {
+    'ibhagwan/fzf-lua',
     'nvim-lua/plenary.nvim',
     { -- If encountering errors, see telescope-fzf-native README for installation instructions
       'nvim-telescope/telescope-fzf-native.nvim',
@@ -39,7 +40,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
       -- },
       autochdir = true,
       pickers = {
-        find_files = { cwd = '~', hidden = true },
+        find_files = { previewer = false, theme = 'ivy', cwd = '~', hidden = true },
       },
       extensions = {
         ['ui-select'] = {
@@ -47,7 +48,8 @@ return { -- Fuzzy Finder (files, lsp, etc)
         },
         file_browser = {
           hidden = { file_browser = true, folder_browser = true },
-          theme = 'dropdown',
+          theme = 'ivy',
+          previewer = false,
           auto_depth = true,
           depth = 1,
           hijack_netrw = true,
@@ -58,6 +60,8 @@ return { -- Fuzzy Finder (files, lsp, etc)
     pcall(require('telescope').load_extension, 'fzf')
     pcall(require('telescope').load_extension, 'ui-select')
     pcall(require('telescope').load_extension, 'file_browser')
+
+    require('fzf-lua').setup()
 
     -- See `:help telescope.builtin`
     local builtin = require 'telescope.builtin'
@@ -71,7 +75,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
     vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
     vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
     vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
-    vim.keymap.set('n', '<f1>', ':Telescope file_browser<CR>')
+    vim.keymap.set({ 'n', 'v', 'i', 't' }, '<f1>', ':Telescope file_browser<CR>')
 
     vim.keymap.set('n', '<leader>/', function()
       -- You can pass additional configuration to Telescope to change the theme, layout, etc.
