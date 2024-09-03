@@ -42,6 +42,12 @@ window {
     padding:          10;
     height: 15em;
     width: 17em;
+location:   north;
+anchor:   north;
+height:    30%;
+width:   30%;
+orientation:   horizontal;
+children:   [mainbox];
 }
 mainbox {
     border:  0;

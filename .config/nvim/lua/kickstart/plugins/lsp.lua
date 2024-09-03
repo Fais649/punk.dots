@@ -169,7 +169,9 @@ return {
         -- gopls = {},
         -- pyright = {},
         rust_analyzer = {},
-        grammarly = {},
+        -- grammarly = {},
+        -- phpactor = {},
+        intelephense = {},
         markdown_oxide = {},
         zls = {},
         bashls = {},
@@ -227,5 +229,5 @@ return {
         },
       }
     end,
-  }
+  },
 }
