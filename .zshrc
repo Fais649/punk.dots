@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export PATH="$HOME/.local/bin:$PATH"
 # Path to your Oh My Zsh installation.
-ZSH=/usr/share/oh-my-zsh/
+ZSH=/Users/faisalalalaiwat/.oh-my-zsh/
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -120,3 +120,6 @@ alias punk="cd ~/punk.systems/ ; ls -la"
 alias punkc="cd ~/punk.systems/code/ ; ls -la"
 alias punkd="cd ~/punk.systems/dots// ; ls -la"
 alias punkssh="ssh root@punk.systems"
+
+eval "$(symfony self:completion zsh)"
+

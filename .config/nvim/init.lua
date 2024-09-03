@@ -323,6 +323,8 @@ require('lazy').setup({
   require 'kickstart.plugins.lsp',
   require 'kickstart.plugins.telescope',
   require 'kickstart.plugins.harpoon',
+  require 'kickstart.plugins.symfony',
+
   -- require 'kickstart.plugins.plugin-keymaps',
   --require 'kickstart.plugins.',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
