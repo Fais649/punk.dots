@@ -1,0 +1,18 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "alt+e",
+        "command": "workbench.action.toggleZenMode",
+        "when": "!isAuxiliaryWindowFocusedContext"
+    },
+    {
+        "key": "ctrl+k z",
+        "command": "-workbench.action.toggleZenMode",
+        "when": "!isAuxiliaryWindowFocusedContext"
+    },
+    {
+        "key": "space e",
+        "command": "revealInExplorer",
+        "when": "editorTextFocus && vim.mode == 'Normal' && notebookEditorCursorAtBoundary != 'none' && notebookEditorCursorAtBoundary != 'top'"
+    }
+]

@@ -1,0 +1,56 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "alt+e",
+        "command": "workbench.action.toggleZenMode",
+        "when": "!isAuxiliaryWindowFocusedContext"
+    },
+    {
+        "key": "ctrl+k z",
+        "command": "-workbench.action.toggleZenMode",
+        "when": "!isAuxiliaryWindowFocusedContext"
+    },
+    {
+        "key": "space e",
+        "command": "workbench.files.action.focusFilesExplorer",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "space e",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sideBarFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "space space",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "shift+h",
+        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+        "when": "!activeEditorGroupEmpty"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+        "when": "!activeEditorGroupEmpty"
+    },
+    {
+        "key": "shift+l",
+        "command": "workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
+        "when": "!activeEditorGroupEmpty"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
+        "when": "!activeEditorGroupEmpty"
+    }
+]
