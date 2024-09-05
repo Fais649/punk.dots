@@ -1,9 +1,10 @@
 [user]
-	email = xial649@gmail.com
-	name = Fais649
+	email = f.alalaiwat@chargecloud.de
+	name = Faisal Alalaiwat
 [credential]
 	helper = libsecret
-[pull]
-	rebase = true
-	ff = only
-	merge = true
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
