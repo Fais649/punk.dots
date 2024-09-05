@@ -55,5 +55,6 @@
     "zenMode.hideLineNumbers": false,
     "zenMode.showTabs": "none",
     "workbench.editor.empty.hint": "hidden",
-    "editor.lineNumbers": "relative"
+    "editor.lineNumbers": "relative",
+    "window.customTitleBarVisibility": "auto"
 }
