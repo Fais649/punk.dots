@@ -1,5 +1,3 @@
-require 'kickstart.plugins.options'
-require 'kickstart.plugins.keymaps'
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
@@ -324,11 +322,12 @@ require('lazy').setup({
   require 'kickstart.plugins.telescope',
   require 'kickstart.plugins.harpoon',
   require 'kickstart.plugins.symfony',
+  require 'kickstart.plugins.flutter',
 
   -- require 'kickstart.plugins.plugin-keymaps',
   --require 'kickstart.plugins.',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
-
+ -- require('flutter-tools').setup {},
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
   --
