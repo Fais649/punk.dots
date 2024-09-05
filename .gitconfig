@@ -3,3 +3,7 @@
 	name = Fais649
 [credential]
 	helper = libsecret
+[pull]
+	rebase = true
+	ff = only
+	merge = true
