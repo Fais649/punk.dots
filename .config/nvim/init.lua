@@ -323,9 +323,11 @@ require('lazy').setup({
   require 'kickstart.plugins.lsp',
   require 'kickstart.plugins.telescope',
   require 'kickstart.plugins.harpoon',
+  require 'kickstart.plugins.flutter',
   -- require 'kickstart.plugins.plugin-keymaps',
   --require 'kickstart.plugins.',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+  -- use defaults
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
@@ -354,6 +356,7 @@ require('lazy').setup({
     },
   },
 })
+require('flutter-tools').setup {}
 
 local harpoon = require 'harpoon'
 harpoon:setup {

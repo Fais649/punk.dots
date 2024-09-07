@@ -125,7 +125,7 @@ window.assistant .sidebar label {
 }
 
 window.assistant .sidebar label.highlight {
-  color: white;
+  color: black;
 }
 
 .osd popover.background > arrow,
@@ -649,7 +649,7 @@ toolbar button:focus, dropdown > .linked:not(.vertical) > button:focus:not(:only
 combobox > .linked:not(.vertical) > button:focus:not(:only-child), splitbutton.suggested-action > button:focus, splitbutton.suggested-action > menubutton > button:focus, splitbutton.destructive-action > button:focus, splitbutton.destructive-action > menubutton > button:focus, splitbutton.opaque > button:focus, splitbutton.opaque > menubutton > button:focus, menubutton.suggested-action > button:focus, menubutton.destructive-action > button:focus, menubutton.opaque > button:focus, menubutton.flat > button:focus, button.flat:focus {
   outline: 2px solid alpha(currentColor, 0.08);
   outline-offset: -2px;
-  color: white;
+  color: black;
 }
 
 panelstatusbar > menubutton > button:hover,
@@ -658,8 +658,8 @@ treeview.view > header > button:hover, headerbar popover calendar > header > but
 splitbutton.flat > menubutton > button:hover, filechooser #pathbarbox > stack > box > button:hover, window.background.messagedialog .response-area > button:hover, window.dialog.message.csd .dialog-action-area > button:hover, .app-notification button:hover, headerbar button:hover:not(.suggested-action):not(.destructive-action), .toolbar button:hover,
 toolbar button:hover, dropdown > .linked:not(.vertical) > button:hover:not(:only-child),
 combobox > .linked:not(.vertical) > button:hover:not(:only-child), splitbutton.suggested-action > button:hover, splitbutton.suggested-action > menubutton > button:hover, splitbutton.destructive-action > button:hover, splitbutton.destructive-action > menubutton > button:hover, splitbutton.opaque > button:hover, splitbutton.opaque > menubutton > button:hover, menubutton.suggested-action > button:hover, menubutton.destructive-action > button:hover, menubutton.opaque > button:hover, menubutton.flat > button:hover, button.flat:hover {
-  background-color: alpha(currentColor, 0.08);
-  color: white;
+  background-color: black;
+  color: black;
 }
 
 panelstatusbar > menubutton > button:active,
@@ -7047,12 +7047,12 @@ panelthemeselector checkbutton.dark:checked {
 
 themeselector checkbutton.follow,
 panelthemeselector checkbutton.follow {
-  background-image: linear-gradient(to bottom right, #ffffff 50%, #202020 50%);
+  background-image: linear-gradient(to bottom right, #000000 50%, #202020 50%);
 }
 
 themeselector checkbutton.light,
 panelthemeselector checkbutton.light {
-  background-color: #ffffff;
+  background-color: #000000;
 }
 
 themeselector checkbutton.dark,

@@ -48,10 +48,10 @@ return { -- Fuzzy Finder (files, lsp, etc)
         },
         file_browser = {
           hidden = { file_browser = true, folder_browser = true },
-          theme = 'ivy',
+          theme = 'dropdown',
           previewer = false,
           auto_depth = true,
-          depth = 1,
+          depth = 6,
           hijack_netrw = true,
         },
       },
