@@ -50,32 +50,32 @@
         "command": "-workbench.action.quickOpen"
     },
     {
-        "key": "shift+h",
+        "key": "alt+h",
         "command": "workbench.action.quickOpen",
         "when": "vim.mode == 'Normal'"
     },
     {
-        "key": "shift+h",
+        "key": "alt+h",
         "command": "workbench.action.quickOpenNavigateNext",
         "when": "inQuickOpen"
     },
     {
-        "key": "shift+l",
+        "key": "alt+l",
         "command": "workbench.action.quickOpen",
         "when": "vim.mode == 'Normal'"
     },
     {
-        "key": "shift+j",
+        "key": "alt+j",
         "command": "workbench.action.navigateBack",
         "when": "vim.mode == 'Normal' && editorFocus"
     },
     {
-        "key": "shift+k",
+        "key": "alt+k",
         "command": "workbench.action.navigateForward",
         "when": "vim.mode == 'Normal' && editorFocus"
     },
     {
-        "key": "shift+l",
+        "key": "alt+l",
         "command": "workbench.action.quickOpenNavigatePrevious",
         "when": "inQuickOpen"
     },

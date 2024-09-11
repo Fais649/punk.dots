@@ -324,6 +324,7 @@ require('lazy').setup({
   require 'kickstart.plugins.telescope',
   require 'kickstart.plugins.harpoon',
   require 'kickstart.plugins.flutter',
+  require 'kickstart.plugins.nvimtree',
   -- require 'kickstart.plugins.plugin-keymaps',
   --require 'kickstart.plugins.',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps

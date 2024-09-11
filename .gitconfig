@@ -7,3 +7,5 @@
 	rebase = true
 	ff = only
 	merge = true
+[safe]
+	directory = /opt/esp-idf

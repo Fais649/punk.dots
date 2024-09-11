@@ -425,7 +425,7 @@ headerbar label:disabled, tab label:disabled, button label:disabled {
 
 label.osd {
   border-radius: 6px;
-  background-color: rgba(10, 10, 10, 0.9);
+  background-color: rgba(33, 33, 33, 0.9);
   color: white;
 }
 
@@ -4010,7 +4010,7 @@ tooltip {
 }
 
 tooltip.background {
-  background-color: rgba(10, 10, 10, 0.9);
+  background-color: rgba(33, 33, 33, 0.9);
   color: white;
 }
 
@@ -5890,7 +5890,7 @@ list.categories {
   min-height: 24px;
   padding: 0 4px;
   border-radius: 6px;
-  background-color: #030303;
+  background-color: #141414;
   color: white;
 }
 
@@ -6282,7 +6282,7 @@ window.background.chromium menu menuitem {
 }
 
 tooltip.background.chromium {
-  background-color: #0a0a0a;
+  background-color: #212121;
 }
 
 /***********
@@ -6937,7 +6937,7 @@ na-tray-applet {
 }
 
 .caja-desktop.view .entry {
-  background-color: #0F0F0F;
+  background-color: #1F1F1F;
   color: white;
   caret-color: currentColor;
 }
@@ -7039,7 +7039,7 @@ na-tray-applet {
 /* multimedia OSD */
 MsdOsdWindow.background.osd {
   border-radius: 6px;
-  background-color: rgba(10, 10, 10, 0.9);
+  background-color: rgba(33, 33, 33, 0.9);
   color: white;
 }
 
@@ -7344,7 +7344,7 @@ MsdOsdWindow.background.osd .progressbar {
 }
 
 .budgie-panel.transparent {
-  background-color: #030303;
+  background-color: #141414;
 }
 
 .budgie-panel button {
@@ -7626,7 +7626,7 @@ calendar.raven-calendar:selected {
 }
 
 .raven-mpris {
-  background-color: #030303;
+  background-color: #141414;
   color: white;
 }
 
@@ -7852,7 +7852,7 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
  * LightDM GTK+ Greeter *
  ************************/
 #panel_window {
-  background-color: #0F0F0F;
+  background-color: #1F1F1F;
   color: white;
 }
 

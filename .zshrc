@@ -120,3 +120,7 @@ alias punk="cd ~/punk.systems/ ; ls -la"
 alias punkc="cd ~/punk.systems/code/ ; ls -la"
 alias punkd="cd ~/punk.systems/dots// ; ls -la"
 alias punkssh="ssh root@punk.systems"
+
+export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
+alias inputs="echo dead | sudo -S input-remapper-service & sleep 2 && echo dead | sudo -S input-remapper-control --device 'Asus Keyboard' --preset default --command start"
+# source /opt/esp-idf/export.sh

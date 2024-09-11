@@ -1,3 +1,17 @@
+vim.g.loaded_netrw = 0
+vim.g.loaded_netrwPlugin = 0
+
+-- vim.api.nvim_create_autocmd('VimEnter', {
+--   callback = function()
+--     if vim.fn.argc() == 0 then
+--       vim.cmd 'enew'
+--     end
+--   end,
+-- })
+
+-- optionally enable 24-bit colour
+vim.opt.termguicolors = true
+
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
