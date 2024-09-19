@@ -145,7 +145,22 @@ return {
           end
         end,
       })
-
+      vim.api.nvim_create_augroup('LspHighlight', { clear = true })
+      vim.api.nvim_create_autocmd('ColorScheme', {
+        group = 'LspHighlight',
+        pattern = '*',
+        command = 'highlight LspReferenceRead cterm=none ctermfg=none ctermbg=none gui=none guifg=none guibg=none',
+      })
+      vim.api.nvim_create_autocmd('ColorScheme', {
+        group = 'LspHighlight',
+        pattern = '*',
+        command = 'highlight LspReferenceText cterm=none ctermfg=none ctermbg=none gui=none guifg=none guibg=none',
+      })
+      vim.api.nvim_create_autocmd('ColorScheme', {
+        group = 'LspHighlight',
+        pattern = '*',
+        command = 'highlight LspReferenceWrite cterm=none ctermfg=none ctermbg=none gui=none guifg=none guibg=none',
+      })
       -- LSP servers and clients are able to communicate to each other what features they support.
       --  By default, Neovim doesn't support everything that is in the LSP specification.
       --  When you add nvim-cmp, luasnip, etc. Neovim now has *more* capabilities.
@@ -165,6 +180,7 @@ return {
       local servers = {
         clangd = {},
         ts_ls = {},
+        kotlin_language_server = {},
         -- arduino_language_server = {},
         -- gopls = {},
         -- pyright = {},

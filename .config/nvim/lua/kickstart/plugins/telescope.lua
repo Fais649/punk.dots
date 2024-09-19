@@ -44,6 +44,9 @@ return { -- Fuzzy Finder (files, lsp, etc)
       autochdir = true,
       pickers = {
         find_files = { previewer = false, theme = 'dropdown', cwd = '~', hidden = true },
+        colorscheme = {
+          enable_preview = true,
+        },
       },
       extensions = {
         ['ui-select'] = {

@@ -228,14 +228,6 @@ require('lazy').setup({
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
 
       -- You can configure highlights by doing something like:
-      vim.cmd.hi 'Comment gui=none'
-      vim.cmd.hi 'VertSplit guifg=none guibg=none'
-      -- vim.cmd.hi 'Visual ctermbg=236 guibg=#505050'
-      -- vim.cmd.hi 'Visual guibg=#505050'
-      vim.cmd.hi 'Pmenu ctermbg=none guibg=none'
-      vim.cmd.hi 'Normal ctermbg=black guibg=black'
-      vim.cmd.hi 'QuickScopePrimary guifg=#ff5f5f gui=underline ctermfg=155 cterm=underline'
-      vim.cmd.hi 'QuickScopeSecondary guifg=#cc2c2c gui=underline ctermfg=81 cterm=underline'
     end,
   },
 
@@ -283,7 +275,7 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
+      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'kotlin', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
@@ -294,6 +286,24 @@ require('lazy').setup({
         additional_vim_regex_highlighting = { 'ruby' },
       },
       indent = { enable = true, disable = { 'ruby' } },
+      playground = {
+        enable = true,
+        disable = {},
+        updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
+        persist_queries = false, -- Whether the query persists across vim sessions
+        keybindings = {
+          toggle_query_editor = 'o',
+          toggle_hl_groups = 'i',
+          toggle_injected_languages = 't',
+          toggle_anonymous_nodes = 'a',
+          toggle_language_display = 'I',
+          focus_language = 'f',
+          unfocus_language = 'F',
+          update = 'R',
+          goto_node = '<cr>',
+          show_help = '?',
+        },
+      },
     },
     config = function(_, opts)
       -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
@@ -309,7 +319,7 @@ require('lazy').setup({
       --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
     end,
   },
-
+  { 'nvim-treesitter/playground' },
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- place them in the correct locations.
@@ -365,12 +375,31 @@ require('lazy').setup({
   },
 })
 require('flutter-tools').setup {}
-vim.cmd.colorscheme 'lackluster-dark'
--- vim.cmd.hi 'Comment gui=none'
--- vim.cmd.hi 'VertSplit guifg=none guibg=none'
-vim.cmd.hi 'Visual ctermbg=236 guifg=#cccccc guibg=#323232'
--- -- vim.cmd.hi 'Visual guibg=#505050'
+vim.cmd.colorscheme 'kanagawa-dragon'
+-- vim.cmd.hi 'Visual ctermbg=236 guifg=#aaaaaa guibg=#323232'
+-- vim.cmd.hi 'Visual guibg=#323232'
 vim.cmd.hi 'Pmenu ctermbg=none guibg=none'
-vim.cmd.hi 'Normal ctermbg=black guibg=black'
-vim.cmd.hi 'QuickScopePrimary guifg=#dd8888 gui=underline ctermfg=155 cterm=underline'
-vim.cmd.hi 'QuickScopeSecondary guifg=#cc6666 gui=underline ctermfg=81 cterm=underline'
+vim.cmd.hi 'Normal ctermbg=black guifg=#bac1b8 guibg=black'
+vim.cmd.hi 'LineNr ctermbg=black guifg=#bac1b8 guibg=black'
+vim.cmd.hi 'CursorColumn ctermbg=black guifg=#bac1b8 guibg=black'
+
+-- vim.cmd.hi '@string guifg=#892E3A'
+--
+-- vim.cmd.hi '@variable guifg=#bac1b8'
+-- vim.cmd.hi '@variable.member guifg=#bac1b8'
+--
+-- vim.cmd.hi '@function guifg=#D63333'
+-- vim.cmd.hi '@function.method guifg=#fe9000'
+-- vim.cmd.hi '@function.method.call guifg=#fe9000'
+-- vim.cmd.hi '@lsp.type.function guifg=#fe9000'
+-- vim.cmd.hi 'identifier guifg=#fe9000'
+--
+-- vim.cmd.hi '@keyword guifg=#bac1b8'
+-- vim.cmd.hi '@constant guifg=#bac1b8'
+--
+-- -- vim.cmd.hi 'identifier guifg=#bac1b8'
+-- vim.cmd.hi '@type guifg=#bac1b8'
+-- -- vim.cmd.hi '@type.builtin guifg=#999999'
+--
+-- vim.cmd.hi 'QuickScopePrimary guifg=#dd8888 gui=underline ctermfg=155 cterm=underline'
+-- vim.cmd.hi 'QuickScopeSecondary guifg=#cc6666 gui=underline ctermfg=81 cterm=underline'
