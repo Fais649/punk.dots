@@ -119,8 +119,15 @@ eval "$(_PIO_COMPLETE=zsh_source pio)"
 alias punk="cd ~/punk.systems/ ; ls -la"
 alias punkc="cd ~/punk.systems/code/ ; ls -la"
 alias punkd="cd ~/punk.systems/dots// ; ls -la"
+
 alias punkssh="ssh root@punk.systems"
 
 export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
 alias inputs="echo dead | sudo -S input-remapper-service & sleep 2 && echo dead | sudo -S input-remapper-control --device 'Asus Keyboard' --preset default --command start"
 # source /opt/esp-idf/export.sh
+export PATH="$PATH:$HOME/esp/xtensa-esp32-elf/bin"
+export IDF_PATH=~/esp/esp-idf
+
+export PKG_CONFIG_PATH=/usr/lib/wlroots0.17/pkgconfig:$PKG_CONFIG_PATH
+
+alias idf="source /opt/esp-idf/export.sh && idf.py "

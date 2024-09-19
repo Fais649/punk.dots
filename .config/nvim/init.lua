@@ -187,12 +187,12 @@ require('lazy').setup({
             if luasnip.expand_or_locally_jumpable() then
               luasnip.expand_or_jump()
             end
-          end, { 'i', 's' }),
+          end, { 'n', 'i', 's' }),
           ['<C-h>'] = cmp.mapping(function()
             if luasnip.locally_jumpable(-1) then
               luasnip.jump(-1)
             end
-          end, { 'i', 's' }),
+          end, { 'n', 'i', 's' }),
 
           -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
           --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
@@ -217,19 +217,25 @@ require('lazy').setup({
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
     'folke/tokyonight.nvim',
+    'rebelot/kanagawa.nvim',
+    'kdheepak/monochrome.nvim',
+    'sho-87/kanagawa-paper.nvim',
+    'slugbyte/lackluster.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'habamax'
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
       vim.cmd.hi 'VertSplit guifg=none guibg=none'
-      vim.cmd.hi 'Visual ctermbg=236 guifg=#cccccc guibg=#505050'
+      -- vim.cmd.hi 'Visual ctermbg=236 guibg=#505050'
+      -- vim.cmd.hi 'Visual guibg=#505050'
       vim.cmd.hi 'Pmenu ctermbg=none guibg=none'
       vim.cmd.hi 'Normal ctermbg=black guibg=black'
+      vim.cmd.hi 'QuickScopePrimary guifg=#ff5f5f gui=underline ctermfg=155 cterm=underline'
+      vim.cmd.hi 'QuickScopeSecondary guifg=#cc2c2c gui=underline ctermfg=81 cterm=underline'
     end,
   },
 
@@ -323,6 +329,7 @@ require('lazy').setup({
   require 'kickstart.plugins.lsp',
   require 'kickstart.plugins.telescope',
   require 'kickstart.plugins.harpoon',
+  require 'kickstart.plugins.suda',
   require 'kickstart.plugins.flutter',
   require 'kickstart.plugins.nvimtree',
   -- require 'kickstart.plugins.plugin-keymaps',
@@ -358,66 +365,12 @@ require('lazy').setup({
   },
 })
 require('flutter-tools').setup {}
-
-local harpoon = require 'harpoon'
-harpoon:setup {
-  settings = {
-    save_on_toggle = true,
-    sync_on_ui_close = true,
-    key = function()
-      return vim.loop.cwd()
-    end,
-  },
-}
-
--- basic telescope configuration
-local conf = require('telescope.config').values
-local function toggle_telescope(harpoon_files)
-  local file_paths = {}
-  for _, item in ipairs(harpoon_files.items) do
-    table.insert(file_paths, item.value)
-  end
-
-  require('telescope.pickers')
-    .new({}, {
-      prompt_title = 'Harpoon',
-      finder = require('telescope.finders').new_table {
-        results = file_paths,
-      },
-      previewer = conf.file_previewer {},
-      sorter = conf.generic_sorter {},
-    })
-    :find()
-end
-
-vim.keymap.set('n', '<A-e>', function()
-  toggle_telescope(harpoon:list())
-end, { desc = 'Open harpoon window' })
-
-vim.keymap.set('n', '<A-w>', function()
-  harpoon:list():add()
-end)
-vim.keymap.set('n', '<A-s>', function()
-  harpoon.ui:toggle_quick_menu(harpoon:list())
-end)
-
-vim.keymap.set('n', '<A-h>', function()
-  harpoon:list():select(1)
-end)
-vim.keymap.set('n', '<C-j>', function()
-  harpoon:list():select(2)
-end)
-vim.keymap.set('n', '<C-k>', function()
-  harpoon:list():select(3)
-end)
-vim.keymap.set('n', '<C-l>', function()
-  harpoon:list():select(4)
-end)
-
--- Toggle previous & next buffers stored within Harpoon list
-vim.keymap.set('n', '<A-a>', function()
-  harpoon:list():prev()
-end)
-vim.keymap.set('n', '<A-d>', function()
-  harpoon:list():next()
-end)
+vim.cmd.colorscheme 'lackluster-dark'
+-- vim.cmd.hi 'Comment gui=none'
+-- vim.cmd.hi 'VertSplit guifg=none guibg=none'
+vim.cmd.hi 'Visual ctermbg=236 guifg=#cccccc guibg=#323232'
+-- -- vim.cmd.hi 'Visual guibg=#505050'
+vim.cmd.hi 'Pmenu ctermbg=none guibg=none'
+vim.cmd.hi 'Normal ctermbg=black guibg=black'
+vim.cmd.hi 'QuickScopePrimary guifg=#dd8888 gui=underline ctermfg=155 cterm=underline'
+vim.cmd.hi 'QuickScopeSecondary guifg=#cc6666 gui=underline ctermfg=81 cterm=underline'

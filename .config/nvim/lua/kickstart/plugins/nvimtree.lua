@@ -35,9 +35,9 @@ return {
           vim.keymap.set('n', '<F3>', function()
             event.instance.focus_or_toggle()
           end)
-          vim.keymap.set('n', '<esc>', function()
-            event.instance.close()
-          end)
+          -- vim.keymap.set('n', '<esc>', function()
+          --   event.instance.close()
+          -- end)
         end,
 
         --- Ideally, we would just call this here and be done with it, but

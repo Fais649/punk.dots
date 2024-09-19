@@ -13,7 +13,7 @@ while true; do
 	fi
 
 	# ./$(ec1ho $djin).sh
-	cd $djin
+	cd "$djin" || exit
 
 done
 

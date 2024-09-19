@@ -38,9 +38,12 @@ return { -- Fuzzy Finder (files, lsp, etc)
       --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
       --   },
       -- },
+      defaults = {
+        theme = 'dropdown',
+      },
       autochdir = true,
       pickers = {
-        find_files = { previewer = false, theme = 'ivy', cwd = '~', hidden = true },
+        find_files = { previewer = false, theme = 'dropdown', cwd = '~', hidden = true },
       },
       extensions = {
         ['ui-select'] = {
