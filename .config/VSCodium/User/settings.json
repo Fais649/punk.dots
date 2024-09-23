@@ -62,10 +62,9 @@
     "idf.espIdfPath": "/home/fais/esp/v5.3.1/esp-idf",
     "idf.pythonBinPath": "/home/fais/.espressif/python_env/idf5.3_py3.12_env/bin/python",
     "idf.toolsPath": "/home/fais/.espressif",
-    "idf.customExtraPaths": "/home/fais/.espressif/tools/xtensa-esp-elf-gdb/14.2_20240403/xtensa-esp-elf-gdb/bin:/home/fais/.espressif/tools/riscv32-esp-elf-gdb/14.2_20240403/riscv32-esp-elf-gdb/bin:/home/fais/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/bin:/home/fais/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20240530/riscv32-esp-elf/bin:/home/fais/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin:/home/fais/.espressif/tools/openocd-esp32/v0.12.0-esp32-20240318/openocd-esp32/bin:/home/fais/.espressif/tools/esp-rom-elfs/20240305",
+    "idf.customExtraPaths": "/home/fais/.espressif/tools/xtensa-esp32-elf/esp32-2019r1-8.2.0/xtensa-esp32-elf/bin:/home/fais/.espressif/tools/xtensa-esp32s2-elf/esp32s2-dev-4-g3a626e9-8.2.0/xtensa-esp32s2-elf/bin:/home/fais/.espressif/tools/esp32ulp-elf/2.28.51.20170517/esp32ulp-elf-binutils/bin:/home/fais/.espressif/tools/cmake/3.13.4/bin:/home/fais/.espressif/tools/openocd-esp32/v0.10.0-esp32-20190708/openocd-esp32/bin:/home/fais/.espressif/tools/ninja/1.9.0",
     "idf.customExtraVars": {
-        "OPENOCD_SCRIPTS": "/home/fais/.espressif/tools/openocd-esp32/v0.12.0-esp32-20240318/openocd-esp32/share/openocd/scripts",
-        "ESP_ROM_ELF_DIR": "/home/fais/.espressif/tools/esp-rom-elfs/20240305/"
+        "OPENOCD_SCRIPTS": "/home/fais/.espressif/tools/openocd-esp32/v0.10.0-esp32-20190708/openocd-esp32/share/openocd/scripts"
     },
     "idf.gitPath": "git"
 }

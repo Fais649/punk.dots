@@ -109,16 +109,10 @@ fi
 source $ZSH/oh-my-zsh.sh
 RPROMPT='$(date +"%H:%m")'
 
-# Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
-
 # Begin: PlatformIO Core completion support
 eval "$(_PIO_COMPLETE=zsh_source pio)"
 # End: PlatformIO Core completion support
 
-alias punk="cd ~/punk.systems/ ; ls -la"
-alias punkc="cd ~/punk.systems/code/ ; ls -la"
-alias punkd="cd ~/punk.systems/dots// ; ls -la"
 
 alias punkssh="ssh root@punk.systems"
 
@@ -133,5 +127,26 @@ export PKG_CONFIG_PATH=/usr/lib/wlroots0.17/pkgconfig:$PKG_CONFIG_PATH
 alias idf="source /opt/esp-idf/export.sh && idf.py "
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export JAVA_HOME=/opt/android-studio/jbr
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+export ANDROID_HOME="$HOME/Android/Sdk"
+export NDK_HOME="$ANDROID_HOME/ndk/$(ls -1 $ANDROID_HOME/ndk)"
+export ANDROID_SDK_ROOT="$HOME/Android/Sdk/"
+export PATH="$PATH:$ANDROID_HOME/emulator/"
+export PUNK="$HOME/punk.systems/"
+export PUNKD="$HOME/punk.systems/dots/"
+export PUNKC="$HOME/punk.systems/code/"
+
+alias punk="cd ~/punk.systems/ ; ls -la"
+alias punkc="cd ~/punk.systems/code/ ; ls -la ;"
+alias punkd="cd ~/punk.systems/dots// ; ls -la"
+
+alias npunk="cd ~/punk.systems/ && nvim \$(fzf)"
+alias npunkc="cd ~/punk.systems/code/ && nvim \$(fzf)"
+alias npunkd="cd ~/punk.systems/dots/ && nvim \$(fzf)"
+
+alias tauri="npm run tauri"
+alias tauri-android-run="emulator -avd Medium_Phone_API_35 > /dev/null 2>&1  & sleep 10 && tauri android dev"
+alias tauri-desktop-run="tauri dev"
+source $PUNKD/.fzfzsh

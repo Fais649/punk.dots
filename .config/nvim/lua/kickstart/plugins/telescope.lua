@@ -55,9 +55,10 @@ return { -- Fuzzy Finder (files, lsp, etc)
         file_browser = {
           hidden = { file_browser = true, folder_browser = true },
           theme = 'dropdown',
+          cwd = '~/punk.systems/',
           previewer = false,
           auto_depth = true,
-          depth = 6,
+          depth = 4,
           hijack_netrw = true,
         },
       },
@@ -81,7 +82,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
     vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
     vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
     vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
-    vim.keymap.set({ 'n', 'v', 'i', 't' }, '<f1>', ':Telescope file_browser<CR>')
+    vim.keymap.set({ 'n', 'v', 'i', 't' }, '<f3>', ':Telescope file_browser<CR>')
 
     vim.keymap.set('n', '<leader>/', function()
       -- You can pass additional configuration to Telescope to change the theme, layout, etc.

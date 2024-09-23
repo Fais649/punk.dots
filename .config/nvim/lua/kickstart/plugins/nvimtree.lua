@@ -26,18 +26,18 @@ return {
         },
 
         on_vim_enter = function(event)
-          --- Open the drawer on startup.
+          -- - Open the drawer on startup.
           -- event.instance.open {
           --   focus = true,
           -- }
 
           --- Example mapping to toggle.
-          vim.keymap.set('n', '<F3>', function()
+          vim.keymap.set('n', '<F1>', function()
             event.instance.focus_or_toggle()
           end)
-          -- vim.keymap.set('n', '<esc>', function()
-          --   event.instance.close()
-          -- end)
+          vim.keymap.set('n', '<esc>', function()
+            event.instance.close()
+          end)
         end,
 
         --- Ideally, we would just call this here and be done with it, but
@@ -74,7 +74,13 @@ return {
       'nvim-tree/nvim-web-devicons',
     },
     config = function()
-      require('nvim-tree').setup {}
+      require('nvim-tree').setup {
+        actions = {
+          open_file = {
+            quit_on_open = true,
+          },
+        },
+      }
 
       vim.api.nvim_create_autocmd('BufEnter', {
         nested = true,
