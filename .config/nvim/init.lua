@@ -115,12 +115,12 @@ require('lazy').setup({
           -- `friendly-snippets` contains a variety of premade snippets.
           --    See the README about individual language/framework/plugin snippets:
           --    https://github.com/rafamadriz/friendly-snippets
-          -- {
-          --   'rafamadriz/friendly-snippets',
-          --   config = function()
-          --     require('luasnip.loaders.from_vscode').lazy_load()
-          --   end,
-          -- },
+          {
+            'rafamadriz/friendly-snippets',
+            config = function()
+              require('luasnip.loaders.from_vscode').lazy_load()
+            end,
+          },
         },
       },
       'saadparwaiz1/cmp_luasnip',
@@ -251,7 +251,7 @@ require('lazy').setup({
       -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sj)'  - [S]urround [R]eplace [)] [']
-      require('mini.surround').setup()
+      -- require('mini.surround').setup()
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
@@ -321,6 +321,33 @@ require('lazy').setup({
     end,
   },
   { 'nvim-treesitter/playground' },
+  {
+    'nvim-treesitter/nvim-treesitter-textobjects',
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+  },
+  {
+    'kylechui/nvim-surround',
+    version = '*', -- Use for stability; omit to use `main` branch for the latest features
+    event = 'VimEnter',
+    dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects' },
+    config = function()
+      require('nvim-surround').setup {
+        keymaps = {
+          insert = '<C-g>s',
+          insert_line = '<C-g>S',
+          normal = '<leader>ys',
+          normal_cur = 'yss',
+          normal_line = 'yS',
+          normal_cur_line = 'ySS',
+          visual = 'S',
+          visual_line = 'gS',
+          delete = 'ds',
+          change = 'cs',
+          change_line = 'cS',
+        },
+      }
+    end,
+  },
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- place them in the correct locations.
@@ -342,6 +369,8 @@ require('lazy').setup({
   require 'kickstart.plugins.harpoon',
   require 'kickstart.plugins.suda',
   require 'kickstart.plugins.flutter',
+  require 'kickstart.plugins.refactor',
+
   require 'kickstart.plugins.nvimtree',
   -- require 'kickstart.plugins.autosave',
   -- require 'kickstart.plugins.plugin-keymaps',

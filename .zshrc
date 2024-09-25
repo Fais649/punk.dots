@@ -148,5 +148,5 @@ alias npunkd="cd ~/punk.systems/dots/ && nvim \$(fzf)"
 
 alias tauri="npm run tauri"
 alias tauri-android-run="emulator -avd Medium_Phone_API_35 > /dev/null 2>&1  & sleep 10 && tauri android dev"
-alias tauri-desktop-run="tauri dev"
+alias tauri-desktop-run="GDK_BACKEND=x11 tauri dev"
 source $PUNKD/.fzfzsh
