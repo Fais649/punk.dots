@@ -71,7 +71,7 @@ ZSH_THEME="minimal"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=()
+plugins=(git git-prompt)
 
 # User configuration
 
@@ -151,3 +151,5 @@ alias tauri="npm run tauri"
 alias tauri-android-run="emulator -avd Medium_Phone_API_35 > /dev/null 2>&1  & sleep 10 && tauri android dev"
 alias tauri-desktop-run="GDK_BACKEND=x11 tauri dev"
 source $PUNKD/.fzfzsh
+
+source $HOME/punk.systems/code/tauri/wispr/.env
