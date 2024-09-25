@@ -2,7 +2,8 @@
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export PATH="$HOME/.local/bin:$PATH:$HOME/.cargo/bin"
 # Path to your Oh My Zsh installation.
-ZSH=/usr/share/oh-my-zsh/
+# ZSH=/usr/share/oh-my-zsh/
+ZSH=/Users/faisalalalaiwat/.oh-my-zsh/
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -130,9 +131,9 @@ alias idf="source /opt/esp-idf/export.sh && idf.py "
 export JAVA_HOME=/opt/android-studio/jbr
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-export ANDROID_HOME="$HOME/Android/Sdk"
-export NDK_HOME="$ANDROID_HOME/ndk/$(ls -1 $ANDROID_HOME/ndk)"
-export ANDROID_SDK_ROOT="$HOME/Android/Sdk/"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export NDK_HOME="$ANDROID_HOME/ndk"
+export ANDROID_SDK_ROOT="$ANDROID_HOME"
 export PATH="$PATH:$ANDROID_HOME/emulator/"
 export PUNK="$HOME/punk.systems/"
 export PUNKD="$HOME/punk.systems/dots/"
