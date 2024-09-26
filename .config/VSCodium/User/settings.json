@@ -66,5 +66,6 @@
     "idf.customExtraVars": {
         "OPENOCD_SCRIPTS": "/home/fais/.espressif/tools/openocd-esp32/v0.10.0-esp32-20190708/openocd-esp32/share/openocd/scripts"
     },
-    "idf.gitPath": "git"
+    "idf.gitPath": "git",
+    "security.workspace.trust.untrustedFiles": "open"
 }

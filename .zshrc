@@ -58,10 +58,28 @@ bindkey "^[[B" down-line-or-beginning-search
 # bindkey "^[[A" history-beginning-search-backward-end
 # bindkey "^[[B" history-beginning-search-forward-end
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-source /usr/share/zsh/plugins/zsh-autopair/autopair.zsh
-source /usr/share/zsh/plugins/zsh-auto-notify/auto-notify.plugin.zsh
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+# source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+# source /usr/share/zsh/plugins/zsh-autopair/autopair.zsh
+# source /usr/share/zsh/plugins/zsh-auto-notify/auto-notify.plugin.zsh
 
-bindkey '	' autosuggest-accept
+# bindkey '	' autosuggest-accept
+# source /usr/share/zinit/zinit.zsh
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
+
+### End of Zinit's installer chunk
