@@ -70,7 +70,7 @@ ZSH_THEME="minimal"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=()
+plugins=(git git-prompt)
 
 # User configuration
 
@@ -107,6 +107,7 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 source $ZSH/oh-my-zsh.sh
+# LPROMPT='|$(git_prompt_info)$ '
 RPROMPT='$(date +"%H:%m")'
 
 # Begin: PlatformIO Core completion support
@@ -145,6 +146,9 @@ alias punkd="cd ~/punk.systems/dots// ; ls -la"
 alias npunk="cd ~/punk.systems/ && nvim \$(fzf)"
 alias npunkc="cd ~/punk.systems/code/ && nvim \$(fzf)"
 alias npunkd="cd ~/punk.systems/dots/ && nvim \$(fzf)"
+
+alias gs="git status"
+alias gc="git checkout"
 
 alias tauri="npm run tauri"
 alias tauri-android-run="emulator -avd Medium_Phone_API_35 > /dev/null 2>&1  & sleep 10 && tauri android dev"
