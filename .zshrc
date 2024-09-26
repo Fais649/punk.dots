@@ -44,3 +44,24 @@ alias tauri="npm run tauri"
 alias tauri-android-run="emulator -avd Medium_Phone_API_35 > /dev/null 2>&1  & sleep 10 && tauri android dev"
 alias tauri-desktop-run="GDK_BACKEND=x11 tauri dev"
 source $PUNKD/.fzfzsh
+alias yd="yazi"
+
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search
+bindkey "^[[B" down-line-or-beginning-search
+# autoload -Uz history-search-end
+# zle -N history-beginning-search-backward-end history-search-end
+# zle -N history-beginning-search-forward-end history-search-end
+# bindkey "^[[A" history-beginning-search-backward-end
+# bindkey "^[[B" history-beginning-search-forward-end
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source /usr/share/zsh/plugins/zsh-autopair/autopair.zsh
+source /usr/share/zsh/plugins/zsh-auto-notify/auto-notify.plugin.zsh
+
+bindkey '	' autosuggest-accept
