@@ -1,8 +1,6 @@
 autoload -Uz compinit
 compinit
 
-source $HOME/.starship
-
 export PATH="$HOME/.local/bin:$PATH:$HOME/.cargo/bin"
 export EDITOR='nvim'
 alias zshconfig="nvim ~/.zshrc"
@@ -83,3 +81,6 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-rust
 
 ### End of Zinit's installer chunk
+#
+#
+source ~/do-not-delete-you-idiot
