@@ -20,7 +20,7 @@ return {
         win_config = {
           margin = 2,
           border = 'rounded',
-          anchor = 'NE',
+          anchor = 'NW',
           width = 40,
           height = '80%',
         },

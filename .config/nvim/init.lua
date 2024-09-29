@@ -245,6 +245,7 @@ require('lazy').setup({
       --  - yinq - [Y]ank [I]nside [N]ext [Q]uote
       --  - ci'  - [C]hange [I]nside [']quote
       require('mini.ai').setup { n_lines = 500 }
+      require('mini.jump').setup { n_lines = 500 }
 
       -- Add/delete/replace surroundings (brackets, quotes, etc.)
       --
@@ -324,6 +325,9 @@ require('lazy').setup({
   {
     'nvim-treesitter/nvim-treesitter-textobjects',
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
+  },
+  {
+    'windwp/nvim-ts-autotag',
   },
   {
     'kylechui/nvim-surround',
@@ -434,3 +438,4 @@ vim.cmd.hi 'CursorColumn ctermbg=black guifg=#bac1b8 guibg=black'
 --
 -- vim.cmd.hi 'QuickScopePrimary guifg=#dd8888 gui=underline ctermfg=155 cterm=underline'
 -- vim.cmd.hi 'QuickScopeSecondary guifg=#cc6666 gui=underline ctermfg=81 cterm=underline'
+require('nvim-ts-autotag').setup {}
