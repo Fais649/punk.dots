@@ -181,6 +181,7 @@ return {
         clangd = {},
         svelte = {},
         cssls = {},
+        tailwindcss = {},
         ts_ls = {},
         kotlin_language_server = {},
         -- arduino_language_server = {},
