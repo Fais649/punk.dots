@@ -16,7 +16,7 @@ vim.keymap.set({ 'n', 'i' }, '<A-k>', 'ddkP', { desc = 'Move Line Up' })
 
 vim.keymap.set('n', '<A-l>', '>>', { desc = 'Indent ->' })
 vim.keymap.set('n', '<A-h>', '<<', { desc = 'Indent <-' })
-vim.keymap.set({ 'i', 'n' }, '<esc>', '<cmd>noh<CR><esc>', { desc = 'Escape and Clear hlsearch' })
+vim.keymap.set({ 'n' }, '<Esc><Esc>', '<cmd>noh <CR>', { desc = 'Escape and Clear hlsearch' })
 
 vim.keymap.set('n', '<A-left>', '<C-o>', { desc = 'Go Back' })
 vim.keymap.set('n', '<A-right>', '<C-i>', { desc = 'Go Forward' })
