@@ -181,6 +181,11 @@ return {
         clangd = {},
         tailwindcss = {},
         svelte = {},
+<<<<<<< HEAD
+=======
+        cssls = {},
+        tailwindcss = {},
+>>>>>>> refs/remotes/origin/main
         ts_ls = {},
         kotlin_language_server = {},
         rust_analyzer = {},
