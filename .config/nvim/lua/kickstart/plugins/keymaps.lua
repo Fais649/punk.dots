@@ -4,10 +4,10 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit Terminal Mode' }
 
 vim.keymap.set({ 'n', 'v', 'i', 't' }, '<f12>', '<cmd>ToggleTerm direction=horizontal<CR>', { desc = 'Toggle Terminal' })
 
-vim.keymap.set({ 'n', 'v' }, '{', '5jzz', { desc = '5 Lines Down' })
-vim.keymap.set({ 'n', 'v' }, '}', '5kzz', { desc = '5 Lines Up' })
-vim.keymap.set({ 'n', 'v' }, '-', '10jzz', { desc = '10 Lines Down' })
-vim.keymap.set({ 'n', 'v' }, '+', '10kzz', { desc = '10 Lines Up' })
+vim.keymap.set({ 'n', 'v' }, '{', '5j', { desc = '5 Lines Down' })
+vim.keymap.set({ 'n', 'v' }, '}', '5k', { desc = '5 Lines Up' })
+vim.keymap.set({ 'n', 'v' }, '-', '10j', { desc = '10 Lines Down' })
+vim.keymap.set({ 'n', 'v' }, '+', '10k', { desc = '10 Lines Up' })
 
 vim.keymap.set('n', '<SPACE><TAB>', '<C-^>')
 
