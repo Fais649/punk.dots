@@ -40,4 +40,14 @@ return {
     end
     return keys
   end,
+  default = {
+    get_root_dir = function()
+      local cwd = vim.loop.cwd()
+      local root = vim.fn.system 'git rev-parse --show-toplevel'
+      if root ~= nil then
+        return string.gsub(root, '\n', '')
+      end
+      return cwd
+    end,
+  },
 }

@@ -41,9 +41,9 @@ return { -- Fuzzy Finder (files, lsp, etc)
       defaults = {
         theme = 'dropdown',
       },
-      -- autochdir = true,
+      autochdir = true,
       pickers = {
-        find_files = { previewer = false, theme = 'dropdown', cwd = '~', hidden = true },
+        find_files = { autochdir = true, previewer = false, theme = 'dropdown', cwd = '~', hidden = true },
         colorscheme = {
           enable_preview = true,
         },
@@ -59,6 +59,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
           previewer = false,
           auto_depth = true,
           depth = 4,
+          autochdir = true,
           hijack_netrw = true,
         },
       },

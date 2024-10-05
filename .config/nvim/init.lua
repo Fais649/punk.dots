@@ -376,11 +376,6 @@ require('lazy').setup({
   require 'kickstart.plugins.refactor',
 
   require 'kickstart.plugins.nvimtree',
-  -- require 'kickstart.plugins.autosave',
-  -- require 'kickstart.plugins.plugin-keymaps',
-  --require 'kickstart.plugins.',
-  -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
-  -- use defaults
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
@@ -410,6 +405,8 @@ require('lazy').setup({
   },
 })
 require('flutter-tools').setup {}
+-- require('harpoon').setup {
+-- }
 vim.cmd.colorscheme 'kanagawa-dragon'
 -- vim.cmd.hi 'Visual ctermbg=236 guifg=#aaaaaa guibg=#323232'
 -- vim.cmd.hi 'Visual guibg=#323232'

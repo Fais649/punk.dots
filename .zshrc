@@ -44,7 +44,8 @@ export IDF_PATH=~/esp/esp-idf
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	export ANDROID_HOME="$HOME/Library/Android/sdk/"
 	export NDK_HOME="$ANDROID_HOME/ndk/$(ls -1 $ANDROID_HOME/ndk)"
-	export JAVA_HOME="/opt/homebrew/Caskroom/android-studio/2024.1.2.13/Android Studio.app/Contents/jbr/"
+export JAVA_HOME=$(/usr/libexec/java_home)
+	# export JAVA_HOME="/opt/homebrew/Caskroom/android-studio/2024.1.2.13/Android Studio.app/Contents/jbr/"
 else
 	export ANDROID_HOME="$HOME/Android/Sdk"
 	export NDK_HOME="$ANDROID_HOME/ndk/$(ls -1 $ANDROID_HOME/ndk)"
